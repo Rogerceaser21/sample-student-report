@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>End of Term Academic Report · Aaira Iman · Term 2, 2025/2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,30..100;1,9..144,300..700,30..100&family=Homemade+Apple&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===========================================
+   VIEWPORT-BASE
+   =========================================== */
+html, body { height: 100%; overflow: hidden; margin: 0; }
+.deck-track { width: 100vw; height: 100vh; height: 100dvh; position: relative; }
+.slide {
+  width: 100vw; height: 100vh; height: 100dvh;
+  overflow: hidden;
+  display: flex; flex-direction: column;
+  position: absolute; inset: 0;
+  opacity: 0;
+  transform: translateY(18px);
+  pointer-events: none;
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.slide.active {
+  opacity: 1; transform: translateY(0);
+  pointer-events: auto; z-index: 1;
+}
+.slide-content {
+  flex: 1; min-height: 0;
+  display: flex; flex-direction: column;
+  justify-content: center;
+  max-height: 100%; overflow: hidden;
+  padding: var(--slide-padding);
+  position: relative;
+}
+:root { --slide-padding: clamp(1.4rem, 4vw, 4rem); }
+.slide-content:not(.cover-content) > .masthead {
+  position: absolute;
+  top: var(--slide-padding);
+  left: var(--slide-padding);
+  right: var(--slide-padding);
+  margin: 0; z-index: 5;
+}
+.slide-content:not(.cover-content) > .floor {
+  position: absolute;
+  bottom: var(--slide-padding);
+  left: var(--slide-padding);
+  right: var(--slide-padding);
+  margin: 0; z-index: 5;
+}
+.slide-content:not(.cover-content) {
+  padding-top: calc(var(--slide-padding) + clamp(2.4rem, 3.8vw, 3rem));
+  padding-bottom: calc(var(--slide-padding) + clamp(2.4rem, 3.8vw, 3rem));
+}
+.slide-content > * { min-height: 0; }
+@media (max-height: 700px) { :root { --slide-padding: clamp(0.9rem, 3vw, 2.4rem); }}
+@media (max-height: 600px) { :root { --slide-padding: clamp(0.6rem, 2.5vw, 1.8rem); }}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.2s !important; } }
+
+/* ===========================================
+   THEME
+   =========================================== */
+:root {
+  --navy: #060924;
+  --navy-elev: #0e1432;
+  --navy-card: #0f1738;
+  --navy-edge: #1a2148;
+  --paper: #f5f3eb;
+  --paper-dim: #cdd0e0;
+  --paper-mid: #9ea3bf;
+  --paper-faint: #6c7290;
+  --ais-red: #EF343A;
+  --ais-red-deep: #BE2126;
+  --ais-blue: #1257FF;
+  --ais-blue-soft: #4d8dff;
+  --ais-yellow: #FFBA14;
+  --ais-yellow-bright: #FDE74C;
+  --ais-green: #3CBB6C;
+  --ais-orange: #ff9a4d;
+  --ais-orange-deep: #e87a1f;
+  --rule: rgba(255, 255, 255, 0.10);
+  --rule-soft: rgba(255, 255, 255, 0.06);
+
+  --cover-title: clamp(3.4rem, 8.5vw, 6.8rem);
+  --slide-title: clamp(2.4rem, 5vw, 4rem);
+  --section-title: clamp(1.7rem, 3vw, 2.4rem);
+  --eyebrow: clamp(1.05rem, 1.55vw, 1.35rem);
+  --dek: clamp(1.4rem, 2.1vw, 1.85rem);
+  --body: clamp(1.05rem, 1.5vw, 1.35rem);
+  --body-lg: clamp(1.2rem, 1.8vw, 1.55rem);
+  --small: clamp(0.95rem, 1.3vw, 1.2rem);
+  --tiny: clamp(0.88rem, 1.15vw, 1.05rem);
+  --stat-num: clamp(2.4rem, 4.5vw, 3.8rem);
+  --stat-num-big: clamp(3.6rem, 7.2vw, 6.2rem);
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  background: #02041a;
+  color: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.slide {
+  background:
+    radial-gradient(circle at 12% 20%, rgba(18, 87, 255, 0.16), transparent 38%),
+    radial-gradient(circle at 88% 80%, rgba(239, 52, 58, 0.13), transparent 40%),
+    radial-gradient(circle at 80% 12%, rgba(255, 186, 20, 0.08), transparent 32%),
+    var(--navy);
+}
+
+/* ===========================================
+   PRIMITIVES
+   =========================================== */
+.eyebrow {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--eyebrow);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ais-red);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7em;
+}
+.eyebrow .stripe {
+  width: clamp(2rem, 3vw, 3rem);
+  height: 3px;
+  background: linear-gradient(90deg, var(--ais-red), var(--ais-yellow), var(--ais-blue));
+  border-radius: 2px;
+}
+.slide-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  font-weight: 700;
+  font-size: var(--slide-title);
+  line-height: 1.0;
+  letter-spacing: -0.012em;
+  color: var(--paper);
+  margin: 0;
+}
+.slide-title em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ais-yellow);
+  font-variation-settings: "opsz" 144, "SOFT" 100;
+  padding-right: 0.08em;
+  display: inline-block;
+}
+
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--tiny);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--paper-dim);
+  font-weight: 600;
+  padding-bottom: clamp(0.6rem, 1.2vw, 1rem);
+  border-bottom: 1px solid var(--rule-soft);
+}
+.masthead .brand { display: inline-flex; align-items: center; gap: clamp(0.5rem, 0.9vw, 0.8rem); }
+.masthead .ais-logo { height: clamp(22px, 3.2vh, 32px); width: auto; display: block; }
+.masthead .school { border-left: 1px solid var(--navy-edge); padding-left: clamp(0.5rem, 0.9vw, 0.8rem); letter-spacing: 0.16em; }
+.masthead .pg {
+  color: var(--ais-yellow);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.22em;
+  display: inline-flex; align-items: center; gap: 0.5em;
+}
+.masthead .pg::before {
+  content: "";
+  width: 0.45em; height: 0.45em; border-radius: 50%;
+  background: var(--ais-yellow);
+  box-shadow: 0 0 8px var(--ais-yellow);
+}
+.floor {
+  display: flex; justify-content: space-between; align-items: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--tiny);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--paper-faint);
+  font-weight: 500;
+  padding-top: clamp(0.6rem, 1.2vw, 1rem);
+  border-top: 1px solid var(--rule-soft);
+}
+
+.grade-pill {
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 700; font-style: italic;
+  letter-spacing: -0.02em;
+  border-radius: 999px;
+  padding: 0.18em 0.7em;
+  min-width: 2.4em; text-align: center;
+  background: rgba(255,255,255,0.06);
+  color: var(--paper);
+  border: 1.5px solid var(--rule);
+}
+.grade-pill.vh, .grade-pill.h { background: var(--ais-yellow); color: var(--navy); border: none; }
+.grade-pill.s  { background: var(--ais-blue-soft); color: white; border: none; }
+.grade-pill.d, .grade-pill.sr { background: var(--ais-orange); color: var(--navy); border: none; }
+.grade-pill.f  { background: var(--ais-orange-deep); color: white; border: none; }
+.grade-pill.ie { background: rgba(255,255,255,0.10); color: var(--paper); border: 1.5px solid var(--rule); }
+.grade-pill.na { background: transparent; color: var(--paper-mid); border: 1.5px dashed var(--rule); }
+
+/* ===========================================
+   COVER
+   =========================================== */
+.cover-content {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: clamp(1.2rem, 2.4vw, 2rem);
+  padding: clamp(1.6rem, 3.5vw, 3.6rem);
+  min-height: 0; position: relative;
+}
+.cover-top {
+  grid-column: 1 / -1;
+  display: flex; justify-content: space-between; align-items: center;
+  position: relative; z-index: 2;
+}
+.cover-top-left { display: flex; align-items: center; gap: clamp(0.7rem, 1.3vw, 1.1rem); }
+.cover-top .logo { height: clamp(36px, 5vh, 56px); width: auto; display: block; }
+.cover-top .school {
+  font-family: 'Space Grotesk', sans-serif; font-weight: 500;
+  font-size: clamp(0.85rem, 1.1vw, 1.05rem);
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--paper-dim);
+  border-left: 1px solid var(--navy-edge); padding-left: clamp(0.7rem, 1.3vw, 1.1rem);
+}
+.cover-top .term-tag {
+  font-family: 'Space Grotesk', sans-serif; font-weight: 600;
+  font-size: clamp(0.78rem, 1.05vw, 1rem);
+  letter-spacing: 0.32em; text-transform: uppercase; color: var(--ais-yellow);
+  display: inline-flex; align-items: center; gap: 0.5em;
+}
+.cover-top .term-tag::before {
+  content: ""; width: 0.45em; height: 0.45em; border-radius: 50%;
+  background: var(--ais-yellow); box-shadow: 0 0 8px var(--ais-yellow);
+}
+.cover-hero {
+  grid-column: 1; grid-row: 2;
+  display: flex; flex-direction: column; justify-content: center;
+  gap: clamp(0.8rem, 1.5vw, 1.3rem);
+  padding-right: clamp(0.8rem, 2vw, 1.6rem);
+  min-height: 0; position: relative; z-index: 2; overflow: visible;
+}
+.cover-kicker {
+  font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+  font-size: clamp(0.85rem, 1.1vw, 1.05rem);
+  letter-spacing: 0.34em; text-transform: uppercase; color: var(--ais-red);
+  display: inline-flex; align-items: center; gap: 0.7em;
+}
+.cover-kicker .stripe {
+  width: clamp(2rem, 3vw, 3rem); height: 3px;
+  background: linear-gradient(90deg, var(--ais-red), var(--ais-yellow), var(--ais-blue));
+  border-radius: 2px;
+}
+.cover-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-variation-settings: "opsz" 144, "SOFT" 60;
+  font-weight: 700;
+  font-size: var(--cover-title);
+  line-height: 0.96;
+  letter-spacing: -0.012em;
+  color: var(--paper); margin: 0;
+  overflow: visible;
+}
+.cover-title em {
+  font-style: italic; font-weight: 400; color: var(--ais-yellow);
+  padding-right: 0.08em; display: inline-block;
+}
+.cover-name {
+  font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 400;
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem); color: var(--ais-yellow); margin: 0;
+  letter-spacing: -0.005em;
+}
+.cover-meta {
+  display: flex; gap: clamp(1rem, 2vw, 1.8rem); flex-wrap: wrap;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(0.95rem, 1.3vw, 1.2rem); color: var(--paper-dim);
+  letter-spacing: 0.04em;
+}
+.cover-meta .item { display: inline-flex; align-items: baseline; gap: 0.5em; }
+.cover-meta .lbl {
+  font-size: clamp(0.78rem, 1.05vw, 1rem);
+  letter-spacing: 0.22em; text-transform: uppercase; color: var(--paper-faint);
+  font-weight: 600;
+}
+.cover-meta .val { font-weight: 500; color: var(--paper); }
+.portrait-stage {
+  grid-column: 2; grid-row: 2;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; min-height: 0; overflow: hidden; z-index: 2;
+}
+.portrait-wrap {
+  position: relative;
+  height: clamp(220px, 50vh, 420px);
+  aspect-ratio: 4 / 5;
+  max-width: 100%;
+  display: flex; align-items: center; justify-content: center;
+}
+.portrait-img {
+  width: 100%; height: 100%;
+  border-radius: 50%; overflow: hidden; background: white;
+  position: relative;
+  box-shadow:
+    0 0 0 4px var(--navy-elev),
+    0 0 0 8px var(--ais-yellow),
+    0 30px 60px -20px rgba(0, 0, 0, 0.7);
+}
+.portrait-img img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: 50% 32%;
+  display: block; filter: saturate(0.95) contrast(1.02); max-height: none;
+}
+.fed-star { position: absolute; font-size: clamp(1rem, 1.8vw, 1.6rem); font-family: 'Fraunces', serif; pointer-events: none; }
+.fed-star.r { top: 6%; left: -6%; color: var(--ais-red); animation: tw 4s ease-in-out infinite; }
+.fed-star.b { top: 24%; right: -8%; color: var(--ais-blue-soft); animation: tw 5s ease-in-out infinite 0.6s; }
+.fed-star.y { bottom: 10%; left: -5%; color: var(--ais-yellow); animation: tw 4.5s ease-in-out infinite 1.2s; }
+.fed-star.r2 { bottom: 22%; right: -4%; color: var(--ais-red-deep); font-size: clamp(0.7rem, 1.2vw, 1rem); animation: tw 5.5s ease-in-out infinite 0.3s; }
+.cover-bottom {
+  grid-column: 1 / -1; grid-row: 3;
+  display: flex; flex-direction: column;
+  gap: clamp(0.7rem, 1.4vw, 1.2rem);
+  position: relative; z-index: 2;
+}
+.cover-floor {
+  display: flex; justify-content: space-between; align-items: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--tiny);
+  letter-spacing: 0.22em; text-transform: uppercase; color: var(--paper-faint);
+  font-weight: 500;
+  padding-top: clamp(0.6rem, 1.2vw, 1rem);
+  border-top: 1px solid var(--navy-edge);
+}
+
+/* ===========================================
+   SLIDE 2 · AT A GLANCE + IFRAME
+   =========================================== */
+.glance-split {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(1rem, 2vw, 1.6rem);
+  flex: 1;
+  align-items: stretch;
+  min-height: 0;
+}
+.glance-left {
+  display: flex; flex-direction: column;
+  gap: clamp(0.6rem, 1.1vw, 0.95rem);
+  min-height: 0; overflow: hidden;
+}
+.glance-right {
+  display: flex; flex-direction: column;
+  min-height: 0;
+  background: white;
+  border: 1px solid var(--rule);
+  border-radius: clamp(0.5rem, 0.95vw, 0.8rem);
+  overflow: hidden; position: relative;
+  box-shadow: 0 12px 24px -10px rgba(0,0,0,0.45);
+}
+.embed-tag {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(0.78rem, 1.05vw, 1rem);
+  letter-spacing: 0.22em; text-transform: uppercase;
+  font-weight: 700; color: var(--paper-faint);
+  padding: clamp(0.5rem, 0.95vw, 0.8rem) clamp(0.7rem, 1.3vw, 1.1rem);
+  background: var(--navy-elev);
+  border-bottom: 1px solid var(--rule);
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 0.7em; flex-shrink: 0;
+}
+.embed-tag .label { color: var(--ais-yellow); }
+.embed-tag .src {
+  color: var(--paper-faint); font-size: 0.85em;
+  letter-spacing: 0.04em; text-transform: lowercase; font-weight: 500;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  max-width: 18em;
+}
+.glance-right iframe { flex: 1; width: 100%; border: 0; background: white; min-height: 0; }
+.glance-tiles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(0.55rem, 1vw, 0.85rem);
+}
+.glance-tile {
+  background: var(--navy-elev);
+  border: 1px solid var(--rule);
+  border-radius: clamp(0.5rem, 0.95vw, 0.8rem);
+  padding: clamp(0.8rem, 1.4vw, 1.15rem) clamp(0.8rem, 1.4vw, 1.1rem);
+  display: flex; flex-direction: column;
+  gap: clamp(0.15rem, 0.4vw, 0.3rem);
+  position: relative; overflow: hidden;
+}
+.glance-tile::before {
+  content: ""; position: absolute; top: 0; left: 0;
+  width: clamp(1.6rem, 2.6vw, 2.2rem); height: 4px;
+}
+.glance-tile.r::before { background: var(--ais-red); }
+.glance-tile.b::before { background: var(--ais-blue); }
+.glance-tile.y::before { background: var(--ais-yellow); }
+.glance-tile.g::before { background: var(--ais-green); }
+.glance-tile .num {
+  font-family: 'Fraunces', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  color: var(--paper); line-height: 0.95; letter-spacing: -0.02em;
+}
+.glance-tile .label {
+  font-size: clamp(0.78rem, 1.05vw, 0.95rem);
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--paper-mid); font-weight: 700;
+}
+.glance-tile .sub {
+  font-family: 'Fraunces', Georgia, serif; font-style: italic;
+  font-size: clamp(0.85rem, 1.15vw, 1.05rem);
+  line-height: 1.3; color: var(--paper-dim);
+}
+.eb-block {
+  display: flex; flex-direction: column;
+  gap: clamp(0.5rem, 0.9vw, 0.8rem);
+  margin-top: clamp(0.2rem, 0.5vw, 0.4rem);
+}
+.eb-row {
+  display: grid;
+  grid-template-columns: clamp(5rem, 9vw, 7rem) 1fr;
+  gap: clamp(0.6rem, 1.1vw, 0.95rem);
+  align-items: center;
+}
+.eb-row .heading {
+  font-family: 'Fraunces', Georgia, serif;
+  font-variation-settings: "opsz" 96, "SOFT" 40;
+  font-weight: 600;
+  font-size: clamp(1rem, 1.6vw, 1.35rem);
+  color: var(--paper); letter-spacing: -0.01em;
+}
+.eb-bar {
+  display: flex;
+  height: clamp(1.7rem, 2.6vw, 2.3rem);
+  border-radius: clamp(0.35rem, 0.6vw, 0.5rem);
+  overflow: hidden;
+  background: rgba(255,255,255,0.05);
+}
+.eb-seg {
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(0.78rem, 1.05vw, 0.95rem);
+  font-weight: 700; letter-spacing: 0.06em;
+  color: var(--navy);
+}
+.eb-seg.excellent { background: var(--ais-yellow); }
+.eb-seg.verygood  { background: var(--ais-blue-soft); color: white; }
+.eb-foot {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: clamp(0.3rem, 0.7vw, 0.55rem);
+  flex-wrap: wrap; gap: clamp(0.5rem, 0.9vw, 0.8rem);
+}
+.eb-legend { display: flex; gap: clamp(0.7rem, 1.3vw, 1.1rem); flex-wrap: wrap; }
+.eb-legend .item {
+  display: inline-flex; align-items: center; gap: 0.5em;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(0.78rem, 1.05vw, 0.95rem);
+  color: var(--paper-mid); letter-spacing: 0.04em;
+}
+.eb-legend .swatch { width: 0.85em; height: 0.85em; border-radius: 3px; }
+.eb-legend .swatch.excellent { background: var(--ais-yellow); }
+.eb-legend .swatch.verygood  { background: var(--ais-blue-soft); }
+.eb-note {
+  font-family: 'Fraunces', Georgia, serif; font-style: italic;
+  font-size: clamp(0.85rem, 1.15vw, 1.05rem);
+  color: var(--paper-dim);
+  border-left: 3px solid var(--ais-green);
+  padding-left: clamp(0.55rem, 1vw, 0.85rem);
+}
+.eb-note strong { color: var(--ais-green); font-style: normal; font-weight: 600; }
+
+/* ===========================================
+   SLIDE 3 · ABOUT
+   =========================================== */
+.about-block { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: clamp(1.2rem, 2vw, 1.8rem); }
+.about-quote {
+  font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 300;
+  font-size: clamp(1.3rem, 2.1vw, 1.8rem);
+  line-height: 1.45; color: var(--paper);
+  max-width: 60ch;
+  padding-left: clamp(1.2rem, 2vw, 1.8rem);
+  border-left: 3px solid var(--ais-yellow);
+}
+.about-note {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--small); color: var(--paper-mid);
+  letter-spacing: 0.04em; max-width: 65ch; line-height: 1.55;
+}
+
+/* ===========================================
+   SLIDE 4 · ACHIEVEMENT LEVELS
+   =========================================== */
+.lvl-pill {
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 700; font-style: italic; letter-spacing: -0.02em;
+  border-radius: 999px;
+  padding: 0.2em 0.7em; min-width: 2.6em; text-align: center;
+}
+.lvl-pill.vh, .lvl-pill.h { background: var(--ais-yellow); color: var(--navy); }
+.lvl-pill.s  { background: var(--ais-blue-soft); color: white; }
+.lvl-pill.d, .lvl-pill.sr { background: var(--ais-orange); color: var(--navy); }
+.lvl-pill.f  { background: var(--ais-orange-deep); color: white; }
+.lvl-pill.ie { background: rgba(255,255,255,0.08); color: var(--paper); border: 1px solid var(--rule); }
+.lvl-pill.na { background: transparent; color: var(--paper-mid); border: 1px dashed var(--rule); }
+
+.optA-explainer {
+  font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 300;
+  font-size: var(--body-lg); line-height: 1.4; color: var(--paper-dim);
+  max-width: 88ch;
+  padding-left: clamp(1rem, 1.7vw, 1.4rem);
+  border-left: 3px solid var(--ais-yellow);
+  margin-bottom: clamp(0.9rem, 1.5vw, 1.2rem);
+}
+.optA-explainer strong { color: var(--ais-yellow); font-style: normal; font-weight: 600; }
+.dual-table {
+  display: flex; flex-direction: column;
+  flex: 1; overflow: hidden;
+  border-radius: clamp(0.5rem, 0.9vw, 0.7rem);
+  border: 1px solid var(--rule);
+  background: rgba(255,255,255,0.03);
+}
+.dual-row {
+  display: grid;
+  grid-template-columns: clamp(3rem, 5vw, 4.4rem) 1fr clamp(7rem, 12vw, 10rem) clamp(7rem, 12vw, 10rem);
+  gap: clamp(0.6rem, 1.2vw, 1rem);
+  padding: clamp(0.4rem, 0.85vw, 0.7rem) clamp(0.7rem, 1.3vw, 1.1rem);
+  align-items: center;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.dual-row:last-child { border-bottom: none; }
+.dual-row.dual-head {
+  background: rgba(255,255,255,0.04);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--tiny);
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--paper-mid); font-weight: 700;
+}
+.dual-row .desc {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(0.95rem, 1.35vw, 1.18rem); line-height: 1.3;
+  color: var(--paper-dim);
+}
+.dual-row .desc strong {
+  font-family: 'Fraunces', serif; font-style: italic;
+  color: var(--paper); font-weight: 600; margin-right: 0.4em;
+}
+.std-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 0.4em;
+  padding: 0.3em 0.7em; border-radius: 6px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(0.78rem, 1.05vw, 0.95rem);
+  letter-spacing: 0.04em; font-weight: 600;
+  width: 100%; text-align: center;
+}
+.std-badge.meets { background: rgba(255, 186, 20, 0.18); color: var(--ais-yellow); }
+.std-badge.below { background: rgba(255, 154, 77, 0.18); color: var(--ais-orange); }
+.std-badge.minus { background: rgba(255,255,255,0.05); color: var(--paper-faint); }
+
+/* ===========================================
+   SLIDE 5 · SUBJECTS
+   =========================================== */
+.grade-key {
+  display: flex; flex-wrap: wrap;
+  gap: clamp(0.6rem, 1.1vw, 0.95rem);
+  margin-bottom: clamp(0.7rem, 1.3vw, 1.1rem);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--tiny); letter-spacing: 0.06em; color: var(--paper-mid);
+}
+.grade-key .key-item { display: inline-flex; align-items: center; gap: 0.5em; }
+.grade-key .key-pill {
+  font-family: 'Fraunces', serif; font-weight: 700; font-style: italic;
+  font-size: clamp(0.85rem, 1.15vw, 1.05rem);
+  padding: 0.1em 0.55em; border-radius: 999px;
+  letter-spacing: -0.02em; min-width: 2.2em; text-align: center;
+}
+.grade-key .key-pill.vh, .grade-key .key-pill.h { background: var(--ais-yellow); color: var(--navy); }
+.grade-key .key-pill.s  { background: var(--ais-blue-soft); color: white; }
+.grade-key .key-pill.d, .grade-key .key-pill.sr  { background: var(--ais-orange); color: var(--navy); }
+.subjects-table {
+  display: flex; flex-direction: column;
+  flex: 1;
+  border: 1px solid var(--rule);
+  border-radius: clamp(0.5rem, 0.95vw, 0.8rem);
+  background: rgba(255,255,255,0.03);
+  overflow: hidden;
+}
+.sub-row {
+  display: grid;
+  grid-template-columns: 1.3fr 0.95fr 0.45fr 0.7fr 0.7fr 0.65fr 0.85fr;
+  gap: clamp(0.45rem, 0.85vw, 0.7rem);
+  padding: clamp(0.45rem, 0.85vw, 0.7rem) clamp(0.7rem, 1.2vw, 1rem);
+  align-items: center;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.request-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4em;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(0.78rem, 1.05vw, 0.95rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: clamp(0.35rem, 0.65vw, 0.55rem) clamp(0.6rem, 1vw, 0.85rem);
+  border-radius: 999px;
+  background: rgba(255, 186, 20, 0.15);
+  color: var(--ais-yellow);
+  border: 1px solid rgba(255, 186, 20, 0.4);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+.request-btn:hover {
+  background: var(--ais-yellow);
+  color: var(--navy);
+  transform: translateX(2px);
+}
+.request-btn::after { content: "→"; transition: transform 0.2s ease; }
+.request-btn:hover::after { transform: translateX(2px); }
+.sub-row:last-child { border-bottom: none; }
+.sub-row.head {
+  background: rgba(255,255,255,0.04);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--tiny);
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--paper-mid); font-weight: 700;
+}
+.sub-row .name {
+  font-family: 'Fraunces', Georgia, serif;
+  font-variation-settings: "opsz" 96, "SOFT" 40;
+  font-weight: 600;
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  color: var(--paper); line-height: 1.2;
+}
+.sub-row .name .non {
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-style: normal; font-weight: 500;
+  font-size: clamp(0.7rem, 0.95vw, 0.9rem);
+  letter-spacing: 0.06em; color: var(--paper-faint);
+  text-transform: uppercase;
+}
+.sub-row .teacher {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(0.92rem, 1.3vw, 1.15rem);
+  color: var(--paper-mid);
+}
+.sub-row .grade-pill {
+  font-size: clamp(0.95rem, 1.4vw, 1.25rem);
+  padding: 0.15em 0.55em; min-width: 2.2em;
+}
+.sub-row .val {
+  font-family: 'Fraunces', Georgia, serif; font-style: italic;
+  font-size: clamp(0.95rem, 1.35vw, 1.2rem);
+  color: var(--paper); font-weight: 500;
+}
+.sub-row .interview {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(0.85rem, 1.15vw, 1.05rem);
+  color: var(--ais-green); font-weight: 600; letter-spacing: 0.04em;
+}
+
+/* ===========================================
+   SLIDE 6 · HOMEROOM REPORT
+   =========================================== */
+.homeroom-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.7fr;
+  gap: clamp(1.4rem, 2.6vw, 2.2rem);
+  flex: 1; align-items: stretch;
+}
+.homeroom-quote {
+  background:
+    radial-gradient(circle at 80% 18%, rgba(255, 186, 20, 0.10), transparent 60%),
+    var(--navy-elev);
+  border: 1px solid var(--rule);
+  border-radius: clamp(0.7rem, 1.3vw, 1.1rem);
+  padding: clamp(1.4rem, 2.5vw, 2.2rem);
+  position: relative; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: center;
+  gap: clamp(0.8rem, 1.4vw, 1.2rem);
+}
+.homeroom-quote::before {
+  content: ""; position: absolute; top: 0; right: 0;
+  width: clamp(3rem, 5vw, 4.2rem); height: clamp(3rem, 5vw, 4.2rem);
+  background: radial-gradient(circle, rgba(255, 186, 20, 0.30), transparent 70%);
+  border-radius: 50%;
+}
+.homeroom-quote .qmark {
+  font-family: 'Fraunces', Georgia, serif; font-style: italic;
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  color: var(--ais-yellow);
+  line-height: 0.5; margin-bottom: -0.2em;
+}
+.homeroom-quote .body {
+  font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 300;
+  font-size: clamp(1.15rem, 1.85vw, 1.55rem);
+  line-height: 1.45; color: var(--paper);
+}
+.homeroom-quote .body strong { font-style: normal; font-weight: 600; color: var(--ais-yellow); }
+.homeroom-author {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: clamp(0.7rem, 1.3vw, 1.1rem);
+  text-align: center;
+}
+.staff-photo {
+  width: clamp(140px, 22vh, 220px); aspect-ratio: 1;
+  border-radius: 50%; overflow: hidden; background: white;
+  position: relative;
+  box-shadow:
+    0 0 0 3px var(--navy-elev),
+    0 0 0 6px var(--ais-yellow),
+    0 18px 36px -16px rgba(0,0,0,0.6);
+}
+.staff-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: 50% 25%;
+  display: block; filter: saturate(0.95) contrast(1.02); max-height: none;
+}
+.staff-name {
+  font-family: 'Fraunces', Georgia, serif;
+  font-variation-settings: "opsz" 96, "SOFT" 40;
+  font-weight: 700;
+  font-size: clamp(1.2rem, 1.9vw, 1.55rem);
+  color: var(--paper); letter-spacing: -0.005em; line-height: 1.15;
+}
+.staff-role {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--small);
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--ais-yellow); font-weight: 700;
+}
+
+/* ===========================================
+   SLIDE 7 · SIGN-OFF
+   =========================================== */
+.signoff-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(1rem, 2vw, 1.6rem);
+  flex: 1; align-items: stretch;
+  max-width: min(900px, 100%);
+  margin: 0 auto;
+  width: 100%;
+}
+.signature {
+  margin-top: clamp(0.4rem, 0.8vw, 0.7rem);
+  font-family: 'Homemade Apple', cursive;
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  color: var(--paper);
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  filter: drop-shadow(0 1px 0 rgba(0,0,0,0.4));
+  opacity: 0.95;
+  user-select: none;
+}
+.signature.tilt-l { transform: rotate(-3deg); }
+.signature.tilt-r { transform: rotate(2deg); }
+.signature img {
+  display: block;
+  height: clamp(2.8rem, 4.2vw, 4rem);
+  width: auto;
+  filter: brightness(0) invert(1) drop-shadow(0 1px 0 rgba(0,0,0,0.4));
+}
+.signature .fallback-text { display: inline; }
+.signature.has-img .fallback-text { display: none; }
+.signatory {
+  background: var(--navy-elev);
+  border: 1px solid var(--rule);
+  border-radius: clamp(0.6rem, 1.1vw, 0.95rem);
+  padding: clamp(1.4rem, 2.4vw, 2rem);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: clamp(0.6rem, 1.1vw, 0.9rem);
+  position: relative; overflow: hidden;
+  text-align: center;
+}
+.signatory::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0;
+  height: 3px; background: var(--ais-yellow);
+}
+.sig-photo {
+  width: clamp(110px, 16vh, 170px); aspect-ratio: 1;
+  border-radius: 50%; overflow: hidden; background: white;
+  position: relative;
+  box-shadow:
+    0 0 0 3px var(--navy-elev),
+    0 0 0 6px var(--ais-yellow),
+    0 14px 28px -12px rgba(0,0,0,0.5);
+}
+.sig-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: 50% 25%;
+  display: block; filter: saturate(0.95) contrast(1.02);
+}
+.signatory .name {
+  font-family: 'Fraunces', Georgia, serif;
+  font-variation-settings: "opsz" 96, "SOFT" 40;
+  font-weight: 700;
+  font-size: clamp(1.2rem, 1.9vw, 1.5rem);
+  color: var(--paper); letter-spacing: -0.005em; line-height: 1.15;
+}
+.signatory .role {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--small);
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--paper-mid); font-weight: 600;
+}
+.signoff-close {
+  margin-top: clamp(0.9rem, 1.6vw, 1.4rem);
+  text-align: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--tiny);
+  letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--paper-faint); font-weight: 600;
+}
+.signoff-close .accent { color: var(--ais-yellow); margin: 0 0.6em; }
+
+/* ===========================================
+   FLOATING CONTROLS
+   =========================================== */
+.fab-cluster {
+  position: fixed;
+  top: clamp(1rem, 2vw, 1.6rem);
+  right: clamp(1rem, 2vw, 1.6rem);
+  z-index: 100;
+  display: flex; gap: clamp(0.4rem, 0.8vw, 0.7rem);
+}
+.fab-pdf {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--small); font-weight: 600;
+  letter-spacing: 0.06em; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 0.55em;
+  padding: clamp(0.55rem, 1vw, 0.85rem) clamp(1rem, 1.6vw, 1.4rem);
+  border-radius: 999px;
+  background: var(--ais-yellow); color: var(--navy);
+  border: none;
+  box-shadow: 0 12px 24px -10px rgba(255, 186, 20, 0.4);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.fab-pdf:hover { transform: translateY(-2px); background: var(--ais-yellow-bright); }
+.fab-pdf::before {
+  content: ""; width: 1.05em; height: 1.05em;
+  background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3'/%3E%3C/svg%3E") center / contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.nav-dots {
+  position: fixed;
+  right: clamp(1rem, 1.8vw, 1.5rem);
+  top: 50%; transform: translateY(-50%);
+  display: flex; flex-direction: column;
+  gap: clamp(0.5rem, 1vw, 0.8rem);
+  z-index: 50;
+}
+.nav-dot {
+  width: clamp(0.55rem, 0.9vw, 0.75rem);
+  height: clamp(0.55rem, 0.9vw, 0.75rem);
+  border-radius: 50%;
+  background: var(--rule);
+  border: none; cursor: pointer; padding: 0;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.nav-dot:hover { background: var(--ais-yellow); transform: scale(1.2); }
+.nav-dot.active { background: var(--ais-yellow); transform: scale(1.3); box-shadow: 0 0 8px var(--ais-yellow); }
+.scroll-hint {
+  position: fixed;
+  left: 50%; bottom: clamp(0.4rem, 0.9vw, 0.7rem);
+  transform: translateX(-50%);
+  z-index: 90;
+  width: clamp(1.5rem, 2.4vw, 2rem);
+  height: clamp(1.5rem, 2.4vw, 2rem);
+  border: none; border-radius: 50%;
+  background: transparent; padding: 0; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--paper-faint);
+  transition: opacity 0.3s ease, color 0.2s ease;
+}
+.scroll-hint:hover { color: var(--ais-yellow); }
+.scroll-hint .chev {
+  display: inline-block;
+  width: 0.55em; height: 0.55em;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  animation: chev-bounce 1.6s ease-in-out infinite;
+}
+.scroll-hint.hide { opacity: 0; pointer-events: none; }
+
+/* Animations */
+.reveal { opacity: 0; transform: translateY(14px); animation: reveal 0.9s cubic-bezier(.2,.7,.2,1) forwards; animation-play-state: paused; }
+.slide.active .reveal { animation-play-state: running; }
+.r1 { animation-delay: 0.1s; } .r2 { animation-delay: 0.22s; } .r3 { animation-delay: 0.35s; }
+.r4 { animation-delay: 0.48s; } .r5 { animation-delay: 0.6s; } .r6 { animation-delay: 0.72s; }
+.r7 { animation-delay: 0.85s; } .r8 { animation-delay: 0.98s; } .r9 { animation-delay: 1.1s; } .r10 { animation-delay: 1.22s; }
+.reveal-scale { opacity: 0; transform: scale(0.95); animation: reveal-scale 1s cubic-bezier(.2,.7,.2,1) forwards; animation-play-state: paused; }
+.slide.active .reveal-scale { animation-play-state: running; }
+@keyframes reveal { to { opacity: 1; transform: translateY(0); } }
+@keyframes reveal-scale { to { opacity: 1; transform: scale(1); } }
+@keyframes tw { 0%, 100% { opacity: 0.55; transform: scale(1); } 50% { opacity: 1; transform: scale(1.18); } }
+@keyframes chev-bounce { 0%, 100% { transform: rotate(45deg) translate(0, 0); } 50% { transform: rotate(45deg) translate(0.18em, 0.18em); } }
+
+/* Responsive */
+@media (max-width: 880px) {
+  .cover-content { grid-template-columns: 1fr; grid-template-rows: auto auto auto auto; }
+  .cover-hero { grid-column: 1; grid-row: 2; padding-right: 0; }
+  .portrait-stage { grid-column: 1; grid-row: 3; }
+  .portrait-wrap { height: clamp(180px, 32vh, 280px); }
+  .cover-bottom { grid-row: 4; }
+  .cover-title { font-size: clamp(2.6rem, 13vw, 5rem); }
+  .glance-split, .signoff-grid, .homeroom-grid { grid-template-columns: 1fr; }
+  .glance-tiles { grid-template-columns: 1fr 1fr; }
+  .nav-dots { display: none; }
+  .sub-row { grid-template-columns: 1.4fr 0.5fr; }
+  .sub-row > *:nth-child(n+3) { display: none; }
+}
+
+/* Print */
+@media print {
+  @page { size: 297mm 167mm; margin: 0; }
+  html, body { background: var(--navy) !important; overflow: visible !important; height: auto !important; }
+  body { margin: 0; }
+  .fab-cluster, .nav-dots, .scroll-hint { display: none !important; }
+  .deck-track { height: auto !important; position: static !important; }
+  .slide {
+    position: static !important; opacity: 1 !important;
+    transform: none !important; pointer-events: auto !important;
+    transition: none !important;
+    width: 100% !important; height: auto !important;
+    min-height: 167mm;
+    page-break-after: always; page-break-inside: avoid; break-after: page;
+  }
+  .slide:last-child { page-break-after: auto; }
+  .reveal, .reveal-scale { opacity: 1 !important; transform: none !important; animation: none !important; }
+  * { animation: none !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="deck-track" id="deck-track">
+
+<!-- ============================================
+     SLIDE 1 · COVER
+     ============================================ -->
+<section class="slide" id="slide-1">
+  <div class="slide-content cover-content">
+    <div class="cover-top reveal r1">
+      <div class="cover-top-left">
+        <img src="Assets/Downloaded Assets/AIS Logo/AIS White.png" alt="AIS" class="logo">
+        <span class="school">Australian International School · Sharjah</span>
+      </div>
+      <span class="term-tag">Term 2 · 2025/2026</span>
+    </div>
+    <div class="cover-hero">
+      <span class="cover-kicker reveal r2"><span class="stripe"></span>End of Term Academic Report</span>
+      <h1 class="cover-title reveal r3">Aaira's<br><em>Term 2</em></h1>
+      <p class="cover-name reveal r4">Aaira Iman · Grade 6</p>
+      <div class="cover-meta reveal r5">
+        <span class="item"><span class="lbl">Reporting</span><span class="val">Term 2</span></span>
+        <span class="item"><span class="lbl">Year</span><span class="val">2025 / 2026</span></span>
+        <span class="item"><span class="lbl">Year Group</span><span class="val">Grade 6</span></span>
+      </div>
+    </div>
+    <div class="portrait-stage reveal-scale r4">
+      <div class="portrait-wrap">
+        <span class="fed-star r">★</span>
+        <span class="fed-star b">★</span>
+        <span class="fed-star y">★</span>
+        <span class="fed-star r2">★</span>
+        <div class="portrait-img">
+          <img src="Assets/aaira.jpeg" alt="Aaira Iman">
+        </div>
+      </div>
+    </div>
+    <div class="cover-bottom">
+      <div class="cover-floor reveal r8">
+        <span>Australian International School Sharjah</span>
+        <span>Term 2 · 2025 / 2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SLIDE 2 · AT A GLANCE + LIVE ATTENDANCE
+     ============================================ -->
+<section class="slide" id="slide-2">
+  <div class="slide-content">
+    <div class="masthead reveal r1">
+      <span class="brand">
+        <img src="Assets/Downloaded Assets/AIS Logo/AIS White.png" alt="AIS" class="ais-logo">
+        <span class="school">End of Term Report · Term 2 2025/26</span>
+      </span>
+      <span class="pg">02 / 07 · At a glance</span>
+    </div>
+    <div style="margin-bottom: clamp(0.7rem, 1.3vw, 1.1rem);">
+      <div class="eyebrow reveal r2"><span class="stripe"></span>Snapshot</div>
+      <h2 class="slide-title reveal r3">Term 2 <em>at a glance</em></h2>
+    </div>
+
+    <div class="glance-split">
+      <div class="glance-left">
+        <div class="glance-tiles">
+          <div class="glance-tile y reveal r4">
+            <div class="num">8</div>
+            <div class="label">Subjects</div>
+            <div class="sub">Studied this reporting period.</div>
+          </div>
+          <div class="glance-tile y reveal r5">
+            <div class="num">6</div>
+            <div class="label">High (H)</div>
+            <div class="sub">At or above expected standard.</div>
+          </div>
+          <div class="glance-tile b reveal r6">
+            <div class="num">2</div>
+            <div class="label">Sound (S)</div>
+            <div class="sub">At or above expected standard.</div>
+          </div>
+          <div class="glance-tile g reveal r7">
+            <div class="num">0</div>
+            <div class="label">Below standard</div>
+            <div class="sub">No subjects rated below.</div>
+          </div>
+        </div>
+
+        <div class="eb-block">
+          <div class="eb-row reveal r8">
+            <div class="heading">Effort</div>
+            <div class="eb-bar">
+              <div class="eb-seg excellent" style="flex: 4;">4 · Excellent</div>
+              <div class="eb-seg verygood" style="flex: 4;">4 · Very Good</div>
+            </div>
+          </div>
+          <div class="eb-row reveal r9">
+            <div class="heading">Behaviour</div>
+            <div class="eb-bar">
+              <div class="eb-seg excellent" style="flex: 7;">7 · Excellent</div>
+              <div class="eb-seg verygood" style="flex: 1;">1</div>
+            </div>
+          </div>
+          <div class="eb-foot reveal r10">
+            <div class="eb-legend">
+              <span class="item"><span class="swatch excellent"></span>Excellent</span>
+              <span class="item"><span class="swatch verygood"></span>Very Good</span>
+            </div>
+            <div class="eb-note">
+              Parent–teacher interview: <strong>Welcomed</strong> across all 8 subjects.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="glance-right reveal r5">
+        <div class="embed-tag">
+          <span class="label">Live Attendance</span>
+          <span class="src">attend.thefeedbackapp.net</span>
+        </div>
+        <iframe
+          src="https://attend.thefeedbackapp.net/primary-parent/0e5f6706-55f1-4035-828e-8861ae284240"
+          loading="lazy"
+          title="AIS Attendance · Aaira Iman"
+          referrerpolicy="no-referrer-when-downgrade"
+          allow="clipboard-read; clipboard-write">
+        </iframe>
+      </div>
+    </div>
+
+    <div class="floor reveal r10">
+      <span>Aaira Iman · Grade 6 · Term 2, 2025/2026</span>
+      <span>Australian International School Sharjah</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SLIDE 3 · ABOUT
+     ============================================ -->
+<section class="slide" id="slide-3">
+  <div class="slide-content">
+    <div class="masthead reveal r1">
+      <span class="brand">
+        <img src="Assets/Downloaded Assets/AIS Logo/AIS White.png" alt="AIS" class="ais-logo">
+        <span class="school">End of Term Report · Term 2 2025/26</span>
+      </span>
+      <span class="pg">03 / 07 · About</span>
+    </div>
+    <div style="margin-bottom: clamp(1rem, 2vw, 1.6rem);">
+      <div class="eyebrow reveal r2"><span class="stripe"></span>Context</div>
+      <h2 class="slide-title reveal r3">About this <em>report</em></h2>
+    </div>
+    <div class="about-block">
+      <div class="about-quote reveal r4">
+        The information contained in this report is a summary of your child's achievement in the learning areas and / or subjects studied over the reporting period.
+      </div>
+      <div class="about-note reveal r5">
+        This report is one of a number of strategies used by our school to communicate with you throughout the year about your child's achievement, effort and behaviour. The levels of achievement awarded are for this reporting period only.
+      </div>
+    </div>
+    <div class="floor reveal r8">
+      <span>Aaira Iman · Grade 6 · Term 2, 2025/2026</span>
+      <span>Australian International School Sharjah</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SLIDE 4 · ACHIEVEMENT LEVELS
+     ============================================ -->
+<section class="slide" id="slide-4">
+  <div class="slide-content">
+    <div class="masthead reveal r1">
+      <span class="brand">
+        <img src="Assets/Downloaded Assets/AIS Logo/AIS White.png" alt="AIS" class="ais-logo">
+        <span class="school">End of Term Report · Term 2 2025/26</span>
+      </span>
+      <span class="pg">04 / 07 · Achievement levels</span>
+    </div>
+    <div style="margin-bottom: clamp(0.8rem, 1.4vw, 1.2rem);">
+      <div class="eyebrow reveal r2"><span class="stripe"></span>How grades are read</div>
+      <h2 class="slide-title reveal r3">Achievement <em>levels</em></h2>
+    </div>
+
+    <p class="optA-explainer reveal r4">
+      AIS grades against <strong>two standards</strong>. The Australian Curriculum is the higher academic bar; the UAE Ministry of Education sets the national bar. A level like "D" can sit below the Australian Curriculum bar while still meeting the Ministry standard.
+    </p>
+
+    <div class="dual-table">
+      <div class="dual-row dual-head">
+        <span></span>
+        <span>Level &amp; descriptor</span>
+        <span style="text-align:center;">Australian Curriculum</span>
+        <span style="text-align:center;">UAE Ministry</span>
+      </div>
+      <div class="dual-row reveal r5">
+        <span class="lvl-pill vh">VH</span>
+        <span class="desc"><strong>Very High</strong>Consistently demonstrates a very high level of knowledge and skills, applied independently in a wide range of contexts.</span>
+        <span class="std-badge meets">At or above</span>
+        <span class="std-badge meets">At or above</span>
+      </div>
+      <div class="dual-row reveal r6">
+        <span class="lvl-pill h">H</span>
+        <span class="desc"><strong>High</strong>Demonstrates a high level of knowledge and skills, applied independently in most contexts.</span>
+        <span class="std-badge meets">At or above</span>
+        <span class="std-badge meets">At or above</span>
+      </div>
+      <div class="dual-row reveal r7">
+        <span class="lvl-pill s">S</span>
+        <span class="desc"><strong>Sound</strong>Demonstrates a sound level of knowledge and skills, applied in some contexts.</span>
+        <span class="std-badge meets">At or above</span>
+        <span class="std-badge meets">At or above</span>
+      </div>
+      <div class="dual-row reveal r8">
+        <span class="lvl-pill d">D</span>
+        <span class="desc"><strong>Developing</strong>Developing knowledge and skills, applied with support in some contexts.</span>
+        <span class="std-badge below">Below expected</span>
+        <span class="std-badge meets">At or above</span>
+      </div>
+      <div class="dual-row reveal r9">
+        <span class="lvl-pill sr">SR</span>
+        <span class="desc"><strong>Support Required</strong>Requires significant support to develop knowledge and skills.</span>
+        <span class="std-badge below">Below expected</span>
+        <span class="std-badge meets">At or above</span>
+      </div>
+      <div class="dual-row reveal r10">
+        <span class="lvl-pill f">F</span>
+        <span class="desc"><strong>F</strong>Evidence is below the expected Ministry standard.</span>
+        <span class="std-badge minus">n / a</span>
+        <span class="std-badge below">Below standard</span>
+      </div>
+      <div class="dual-row reveal r10">
+        <span class="lvl-pill ie">IE</span>
+        <span class="desc"><strong>Insufficient Evidence</strong>Achievement level not able to be established. Treated as F.</span>
+        <span class="std-badge minus">n / a</span>
+        <span class="std-badge below">Below standard</span>
+      </div>
+    </div>
+
+    <div class="floor reveal r10">
+      <span>Aaira Iman · Grade 6 · Term 2, 2025/2026</span>
+      <span>Australian International School Sharjah</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SLIDE 5 · SUBJECTS (all 8)
+     ============================================ -->
+<section class="slide" id="slide-5">
+  <div class="slide-content">
+    <div class="masthead reveal r1">
+      <span class="brand">
+        <img src="Assets/Downloaded Assets/AIS Logo/AIS White.png" alt="AIS" class="ais-logo">
+        <span class="school">End of Term Report · Term 2 2025/26</span>
+      </span>
+      <span class="pg">05 / 07 · Subjects</span>
+    </div>
+    <div style="margin-bottom: clamp(0.6rem, 1.2vw, 1rem);">
+      <div class="eyebrow reveal r2"><span class="stripe"></span>All 8 subjects</div>
+      <h2 class="slide-title reveal r3">Subject <em>results</em></h2>
+    </div>
+
+    <div class="grade-key reveal r4">
+      <span class="key-item"><span class="key-pill h">H</span>High</span>
+      <span class="key-item"><span class="key-pill s">S</span>Sound</span>
+      <span class="key-item" style="opacity:0.55;"><span class="key-pill vh">VH</span>Very High</span>
+      <span class="key-item" style="opacity:0.55;"><span class="key-pill d">D</span>Developing</span>
+      <span class="key-item" style="opacity:0.55;"><span class="key-pill sr">SR</span>Support Required</span>
+      <span style="margin-left: auto; color: var(--paper-faint); letter-spacing: 0.18em; text-transform: uppercase;">Aaira's grades highlighted</span>
+    </div>
+
+    <div class="subjects-table">
+      <div class="sub-row head">
+        <span>Subject</span>
+        <span>Teacher</span>
+        <span style="text-align:center;">Grade</span>
+        <span>Effort</span>
+        <span>Behaviour</span>
+        <span>Interview</span>
+        <span style="text-align:center;">Request</span>
+      </div>
+      <div class="sub-row reveal r5">
+        <span class="name">English</span>
+        <span class="teacher">Olivia Gill</span>
+        <span style="text-align:center;"><span class="grade-pill h">H</span></span>
+        <span class="val">Excellent</span>
+        <span class="val">Excellent</span>
+        <span class="interview">Welcomed</span>
+        <a class="request-btn" href="mailto:?subject=Interview%20Request%20%E2%80%94%20English%20%E2%80%94%20Aaira%20Iman&amp;body=Dear%20Ms%20Gill%2C%0A%0AI%20would%20like%20to%20request%20a%20parent%2Fteacher%20interview%20regarding%20Aaira%27s%20progress%20in%20English.%0A%0AKind%20regards">Request</a>
+      </div>
+      <div class="sub-row reveal r5">
+        <span class="name">Mathematics</span>
+        <span class="teacher">Olivia Gill</span>
+        <span style="text-align:center;"><span class="grade-pill h">H</span></span>
+        <span class="val">Excellent</span>
+        <span class="val">Excellent</span>
+        <span class="interview">Welcomed</span>
+        <a class="request-btn" href="mailto:?subject=Interview%20Request%20%E2%80%94%20Mathematics%20%E2%80%94%20Aaira%20Iman&amp;body=Dear%20Ms%20Gill%2C%0A%0AI%20would%20like%20to%20request%20a%20parent%2Fteacher%20interview%20regarding%20Aaira%27s%20progress%20in%20Mathematics.%0A%0AKind%20regards">Request</a>
+      </div>
+      <div class="sub-row reveal r6">
+        <span class="name">Science</span>
+        <span class="teacher">Olivia Gill</span>
+        <span style="text-align:center;"><span class="grade-pill s">S</span></span>
+        <span class="val">Excellent</span>
+        <span class="val">Excellent</span>
+        <span class="interview">Welcomed</span>
+        <a class="request-btn" href="mailto:?subject=Interview%20Request%20%E2%80%94%20Science%20%E2%80%94%20Aaira%20Iman&amp;body=Dear%20Ms%20Gill%2C%0A%0AI%20would%20like%20to%20request%20a%20parent%2Fteacher%20interview%20regarding%20Aaira%27s%20progress%20in%20Science.%0A%0AKind%20regards">Request</a>
+      </div>
+      <div class="sub-row reveal r6">
+        <span class="name">Social Studies <span class="non">For Non-Arabs</span></span>
+        <span class="teacher">Hanan Siam</span>
+        <span style="text-align:center;"><span class="grade-pill h">H</span></span>
+        <span class="val">Very Good</span>
+        <span class="val">Excellent</span>
+        <span class="interview">Welcomed</span>
+        <a class="request-btn" href="mailto:?subject=Interview%20Request%20%E2%80%94%20Social%20Studies%20%E2%80%94%20Aaira%20Iman&amp;body=Dear%20Ms%20Siam%2C%0A%0AI%20would%20like%20to%20request%20a%20parent%2Fteacher%20interview%20regarding%20Aaira%27s%20progress%20in%20Social%20Studies.%0A%0AKind%20regards">Request</a>
+      </div>
+      <div class="sub-row reveal r7">
+        <span class="name">Arabic Studies <span class="non">For Non-Arabs</span></span>
+        <span class="teacher">Hanan Siam</span>
+        <span style="text-align:center;"><span class="grade-pill h">H</span></span>
+        <span class="val">Very Good</span>
+        <span class="val">Excellent</span>
+        <span class="interview">Welcomed</span>
+        <a class="request-btn" href="mailto:?subject=Interview%20Request%20%E2%80%94%20Arabic%20Studies%20%E2%80%94%20Aaira%20Iman&amp;body=Dear%20Ms%20Siam%2C%0A%0AI%20would%20like%20to%20request%20a%20parent%2Fteacher%20interview%20regarding%20Aaira%27s%20progress%20in%20Arabic%20Studies.%0A%0AKind%20regards">Request</a>
+      </div>
+      <div class="sub-row reveal r7">
+        <span class="name">Islamic Studies <span class="non">For Non-Arabs</span></span>
+        <span class="teacher">Eman Dakhel</span>
+        <span style="text-align:center;"><span class="grade-pill h">H</span></span>
+        <span class="val">Very Good</span>
+        <span class="val">Excellent</span>
+        <span class="interview">Welcomed</span>
+        <a class="request-btn" href="mailto:?subject=Interview%20Request%20%E2%80%94%20Islamic%20Studies%20%E2%80%94%20Aaira%20Iman&amp;body=Dear%20Ms%20Dakhel%2C%0A%0AI%20would%20like%20to%20request%20a%20parent%2Fteacher%20interview%20regarding%20Aaira%27s%20progress%20in%20Islamic%20Studies.%0A%0AKind%20regards">Request</a>
+      </div>
+      <div class="sub-row reveal r8">
+        <span class="name">Music</span>
+        <span class="teacher">Darren Marais</span>
+        <span style="text-align:center;"><span class="grade-pill h">H</span></span>
+        <span class="val">Very Good</span>
+        <span class="val">Very Good</span>
+        <span class="interview">Welcomed</span>
+        <a class="request-btn" href="mailto:?subject=Interview%20Request%20%E2%80%94%20Music%20%E2%80%94%20Aaira%20Iman&amp;body=Dear%20Mr%20Marais%2C%0A%0AI%20would%20like%20to%20request%20a%20parent%2Fteacher%20interview%20regarding%20Aaira%27s%20progress%20in%20Music.%0A%0AKind%20regards">Request</a>
+      </div>
+      <div class="sub-row reveal r8">
+        <span class="name">Health &amp; Physical Education</span>
+        <span class="teacher">Matthew Philip Brown</span>
+        <span style="text-align:center;"><span class="grade-pill s">S</span></span>
+        <span class="val">Excellent</span>
+        <span class="val">Excellent</span>
+        <span class="interview">Welcomed</span>
+        <a class="request-btn" href="mailto:?subject=Interview%20Request%20%E2%80%94%20Health%20%26%20PE%20%E2%80%94%20Aaira%20Iman&amp;body=Dear%20Mr%20Brown%2C%0A%0AI%20would%20like%20to%20request%20a%20parent%2Fteacher%20interview%20regarding%20Aaira%27s%20progress%20in%20Health%20%26%20Physical%20Education.%0A%0AKind%20regards">Request</a>
+      </div>
+    </div>
+
+    <div class="floor reveal r10">
+      <span>Aaira Iman · Grade 6 · Term 2, 2025/2026</span>
+      <span>Australian International School Sharjah</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SLIDE 6 · HOMEROOM REPORT
+     ============================================ -->
+<section class="slide" id="slide-6">
+  <div class="slide-content">
+    <div class="masthead reveal r1">
+      <span class="brand">
+        <img src="Assets/Downloaded Assets/AIS Logo/AIS White.png" alt="AIS" class="ais-logo">
+        <span class="school">End of Term Report · Term 2 2025/26</span>
+      </span>
+      <span class="pg">06 / 07 · Homeroom report</span>
+    </div>
+    <div style="margin-bottom: clamp(1rem, 1.8vw, 1.5rem);">
+      <div class="eyebrow reveal r2"><span class="stripe"></span>From the homeroom teacher</div>
+      <h2 class="slide-title reveal r3">Homeroom <em>report</em></h2>
+    </div>
+
+    <div class="homeroom-grid">
+      <div class="homeroom-quote reveal r4">
+        <div class="qmark">"</div>
+        <div class="body">
+          Aaira is a respectful and engaged student who enjoys learning and collaborating with others. She always follows the <strong>STAR expectations</strong> by being safe, respectful, and a positive team player. Aaira demonstrates wisdom by making thoughtful choices and reflects on her learning.
+        </div>
+      </div>
+
+      <div class="homeroom-author reveal-scale r5">
+        <div class="staff-photo">
+          <img src="Assets/Olivia Gill.jpg" alt="Miss O. Gill">
+        </div>
+        <div class="staff-name">Miss O. Gill</div>
+        <div class="staff-role">Homeroom teacher</div>
+      </div>
+    </div>
+
+    <div class="floor reveal r8">
+      <span>Aaira Iman · Grade 6 · Term 2, 2025/2026</span>
+      <span>Australian International School Sharjah</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SLIDE 7 · SIGN-OFF
+     ============================================ -->
+<section class="slide" id="slide-7">
+  <div class="slide-content">
+    <div class="masthead reveal r1">
+      <span class="brand">
+        <img src="Assets/Downloaded Assets/AIS Logo/AIS White.png" alt="AIS" class="ais-logo">
+        <span class="school">End of Term Report · Term 2 2025/26</span>
+      </span>
+      <span class="pg">07 / 07 · Sign-off</span>
+    </div>
+    <div style="margin-bottom: clamp(1rem, 1.8vw, 1.5rem);">
+      <div class="eyebrow reveal r2"><span class="stripe"></span>Signed</div>
+      <h2 class="slide-title reveal r3">Issued <em>by the school</em></h2>
+    </div>
+
+    <div class="signoff-grid">
+      <div class="signatory reveal r4">
+        <div class="sig-photo"><img src="Assets/Brooke_Pickett.jpg" alt="Ms B. Pickett"></div>
+        <div class="name">Ms B. Pickett</div>
+        <div class="role">Head of School Primary</div>
+        <div class="signature tilt-l" id="sig-pickett">
+          <img src="Assets/signature-pickett.png" alt="" onload="this.parentElement.classList.add('has-img')" onerror="this.remove()">
+          <span class="fallback-text">B<span style="margin: 0 0.05em;">·</span>Pickett</span>
+        </div>
+      </div>
+      <div class="signatory reveal r5">
+        <div class="sig-photo"><img src="Assets/Steven_Mcluckie.jpg" alt="Mr S. McLuckie"></div>
+        <div class="name">Mr S. McLuckie</div>
+        <div class="role">Executive Principal</div>
+        <div class="signature tilt-r" id="sig-mcluckie">
+          <img src="Assets/signature-mcluckie.png" alt="" onload="this.parentElement.classList.add('has-img')" onerror="this.remove()">
+          <span class="fallback-text">S<span style="opacity: 0.9;">~~~</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="signoff-close reveal r7">
+      Issued by AIS Sharjah
+      <span class="accent">·</span>
+      Term 2, 2025 / 2026
+    </div>
+
+    <div class="floor reveal r8">
+      <span>Aaira Iman · Grade 6 · Term 2, 2025/2026</span>
+      <span>Australian International School Sharjah</span>
+    </div>
+  </div>
+</section>
+
+</div><!-- /deck-track -->
+
+<div class="fab-cluster">
+  <button class="fab-pdf" onclick="window.print()" title="Save this report as a PDF">Save as PDF</button>
+</div>
+
+<button class="scroll-hint" id="scroll-hint" aria-label="Next slide">
+  <span class="chev"></span>
+</button>
+
+<nav class="nav-dots" aria-label="Slide navigation">
+  <button class="nav-dot active" data-slide="1" title="Cover"></button>
+  <button class="nav-dot" data-slide="2" title="At a glance"></button>
+  <button class="nav-dot" data-slide="3" title="About"></button>
+  <button class="nav-dot" data-slide="4" title="Achievement levels"></button>
+  <button class="nav-dot" data-slide="5" title="Subjects"></button>
+  <button class="nav-dot" data-slide="6" title="Homeroom report"></button>
+  <button class="nav-dot" data-slide="7" title="Sign-off"></button>
+</nav>
+
+<script>
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const dots = document.querySelectorAll('.nav-dot');
+  const scrollHint = document.getElementById('scroll-hint');
+  const total = slides.length;
+  let currentSlide = 0;
+
+  function goTo(idx) {
+    idx = Math.max(0, Math.min(total - 1, idx));
+    if (idx === currentSlide) return;
+    slides[currentSlide].classList.remove('active');
+    currentSlide = idx;
+    slides[idx].classList.add('active');
+    dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+    updateScrollHint();
+  }
+  function updateScrollHint() {
+    if (!scrollHint) return;
+    scrollHint.classList.toggle('hide', currentSlide === total - 1);
+  }
+  slides[0].classList.add('active');
+  updateScrollHint();
+
+  let wheelCooldown = false;
+  window.addEventListener('wheel', (e) => {
+    // Don't hijack scroll inside the iframe-embed area
+    if (e.target.closest('.glance-right')) return;
+    if (wheelCooldown) return;
+    if (Math.abs(e.deltaY) < 30) return;
+    wheelCooldown = true;
+    setTimeout(() => { wheelCooldown = false; }, 650);
+    if (e.deltaY > 0) goTo(currentSlide + 1);
+    else goTo(currentSlide - 1);
+  }, { passive: true });
+
+  let touchStartY = 0, touchStartX = 0;
+  window.addEventListener('touchstart', (e) => {
+    touchStartY = e.touches[0].clientY;
+    touchStartX = e.touches[0].clientX;
+  }, { passive: true });
+  window.addEventListener('touchend', (e) => {
+    if (e.target.closest('.glance-right')) return;
+    const dy = e.changedTouches[0].clientY - touchStartY;
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dy) > Math.abs(dx) && Math.abs(dy) > 60) {
+      if (dy < 0) goTo(currentSlide + 1);
+      else goTo(currentSlide - 1);
+    }
+  }, { passive: true });
+
+  dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+  if (scrollHint) scrollHint.addEventListener('click', () => goTo(currentSlide + 1));
+
+  document.addEventListener('keydown', (e) => {
+    const tag = (e.target.tagName || '').toLowerCase();
+    if (tag === 'input' || tag === 'textarea') return;
+    switch (e.key) {
+      case 'ArrowDown': case 'ArrowRight': case 'PageDown': case ' ':
+        e.preventDefault(); goTo(currentSlide + 1); break;
+      case 'ArrowUp': case 'ArrowLeft': case 'PageUp':
+        e.preventDefault(); goTo(currentSlide - 1); break;
+      case 'Home': e.preventDefault(); goTo(0); break;
+      case 'End': e.preventDefault(); goTo(total - 1); break;
+    }
+  });
+</script>
+
+</body>
+</html>
